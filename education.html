@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Education | Pema Gyelmo</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Gallery styles */
+    .edu-gallery {
+      display: grid;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    /* College 2x2 grid */
+    .edu-gallery.college {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    
+    /* Make college images a bit larger */
+    .edu-gallery.college img {
+      max-width: 350px; /* Adjust if needed */
+    }
+
+    .edu-gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .caption {
+      text-align: center;
+      font-style: italic;
+      margin-top: 10px;
+      color: #2535df;
+    }
+
+    /* Optional styling for the section */
+    .education ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .education li {
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="education.html" class="active">Education</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="education">
+    <h1>Education</h1>
+    <ul>
+      <li>
+         <strong><span class="college-name">Samtse College of Education</span></strong> [2023 – 2025]
+      
+        <div class="edu-gallery college">
+          <img src="sce1.jpg" alt="College Campus">
+          <img src="sce2.jpg" alt="College Campus">
+          <img src="sce3.jpg" alt="College Campus">
+          <img src="sce4.jpg" alt="College Campus">
+        </div>
+        <br>
+        <p>Samtse College of Education introduced both challenges and opportunities
+          for growth. The shift from structured school learning to greater independence 
+          initially made it difficult to manage assignments and stay focused. Over time, 
+          I adapted to the interactive learning style, which encouraged active participation, 
+          critical thinking, and a deeper understanding of the subjects. Engaging with diverse 
+          coursework and collaborative projects helped me enhance my presentation skills, time 
+          management, and teamwork. 
+          <br>
+          These experiences not only strengthened my academic abilities 
+          but also shaped my personal growth, making my college journey both enriching and memorable.</p>
+        
+      </li>
+      <br>
+      <li> 
+        
+        <strong><span>Jigme Sherubling Central School</span></strong> [2022]
+        <br>
+        <div class="edu-left">
+          <img src="jigsher.jpg" alt="High School">
+        </div>
+      <div class="edu-right">
+        
+        <p>It was challenging yet rewarding experience that prepared me for 
+          the next chapter of my academic journey.
+          It was a period of learning and growth, where I developed essential 
+          skills and built lifelong friendships.</p>
+      </div>
+      </li>
+        
+      </li>
+      <br>
+      <li>
+        <strong><span>Dungtse Central School</span></strong> [2019]
+        <div class="edu-gallery single">
+          <img src="dcs.jpg" alt="Middle School">
+        <p>Middle school was an important stage of my learning journey. 
+          It laid the foundation for essential skills, sparked my curiosity, 
+          and nurtured a love for learning. The supportive teachers, engaging 
+          lessons, and extracurricular activities helped me grow academically and 
+          personally, preparing me for the challenges of high school. </p>
+        </div>
+        
+      </li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>© 2025 Pema Gyelmo | B.Ed ICT</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <button id="goBackBtn" class="go-back">⬅ Go Back</button>
+
+</body>
+</html>
