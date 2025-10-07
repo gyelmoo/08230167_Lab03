@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Pema Gyelmo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="projects">
+    <h1>My Projects</h1>
+
+    <!-- Project Cards -->
+    <div class="project-card" onclick="openModal('hostelModal')">
+      <h3>College Hostel Management System</h3>
+      <p>Click to see images and project details.</p>
+    </div>
+
+    <div class="project-card" onclick="openModal('blogModal')">
+      <h3>Blogging Website</h3>
+      <p>Click to see screenshots and details.</p>
+    </div>
+  </section>
+
+  <!-- Modal for College Hostel Management System -->
+  <div id="hostelModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('hostelModal')">&times;</span>
+      <h2>College Hostel Management System</h2>
+      <div class="modal-images">
+        <img src="ddd.jpg" alt="Hostel Screenshot 1">
+        <img src="hostel.jpg" alt="Hostel Screenshot 2">
+        <img src="erd.jpg" alt="Hostel Screenshot 3">
+        <img src="obj.jpg" alt="Hostel Screenshot 4">
+      </div>
+      <div class="modal-description">
+        <p>This project was designed to streamline and digitize hostel operations, 
+          making management easier for both administrators and students. 
+          The poroject focuses on improving communication, reducing paperwork, and ensuring 
+          transparency in hostel activities. 
+          It provides real-time updates and user-friendly interfaces for different stakeholders. 
+          <br>
+          <br>
+          Features include:</p>
+        <ul>
+          <li>Attendance tracking for students.</li>
+          <li>Complaint submission and management system.</li>
+          <li>Room allocation and student information management.</li>
+          <li>Admin dashboard for monitoring hostel activities.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for Blogging Website -->
+<div id="blogModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal('blogModal')">&times;</span>
+    <h2>Blogging Website</h2>
+    <div class="modal-images">
+      <img src="blog.jpg" alt="Blog Screenshot 1">
+      <img src="blog2.jpg" alt="Blog Screenshot 2">
+    </div>
+    <div class="modal-description">
+      <p>The Blogging Website was developed as a creative 
+        platform for sharing my ideas, experiences, and 
+        reflections while also giving me the opportunity to 
+        practice my web development skills. Writing blogs 
+        allowed me to express myself freely and connect with 
+        readers through meaningful content. 
+        <br>
+        <br>
+        The website includes features such as post creation, editing, and a comment section 
+        for interaction. With a responsive design and well-organized categories, 
+        it provides a smooth browsing experience across devices. 
+        This project not only strengthened my technical abilities but 
+        also nurtured my passion for writing and digital communication.</p>
+     
+      <p>
+        🔗 Visit my blog here: 
+        <a href="https://passionforadventure10.blogspot.com" target="_blank">Open Blog</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+  <footer>
+    <p>© 2025 Pema Gyelmo | B.Ed ICT</p>
+  </footer>
+
+  <script>
+    function openModal(modalId) {
+      document.getElementById(modalId).style.display = 'block';
+    }
+
+    function closeModal(modalId) {
+      document.getElementById(modalId).style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+      const hostelModal = document.getElementById('hostelModal');
+      const blogModal = document.getElementById('blogModal');
+      if (event.target === hostelModal) hostelModal.style.display = 'none';
+      if (event.target === blogModal) blogModal.style.display = 'none';
+    }
+  </script>
+
+  <script src="script.js"></script>
+  <button id="goBackBtn" class="go-back">⬅ Go Back</button>
+  
+
+</body>
+</html>
