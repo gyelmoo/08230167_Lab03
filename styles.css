@@ -1,0 +1,391 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Animated Gradient Background */
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a1c4fd, #c2e9fb);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: #333;
+  min-height: 100vh;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Navigation */
+header {
+  background: rgba(30, 30, 47, 0.9);
+  padding: 12px;
+}
+
+.nav-links {
+  display: flex;                 /* Make links horizontal */
+  justify-content: flex-end;     /* Move links to the right */
+  list-style: none;              /* Remove bullets */
+  gap: 30px;                     /* Space between links */
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover,
+.nav-links .active {
+  color: #f34040;
+}
+
+/* Sections with white cards */
+section {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 50px;
+  margin: 30px auto;
+  border-radius: 15px;
+  max-width: 1000px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Home */
+.home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home-text h1 {
+  font-size: 2.5rem;
+  font-family: 'Poppins', sans-serif;
+  color: #2222ff;
+  margin-bottom: 15px;
+}
+
+.home-text h2,
+h3 {
+  font-family: 'Poppins', sans-serif;
+}
+
+.quote {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.8rem;
+  color: #673ab7;
+  margin-bottom: 20px;
+}
+
+.home-image img {
+  width: 250px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* About */
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-img img {
+  width: 250px;
+  border-radius: 10px;
+  margin-right: 30px;
+}
+
+.about-text h1 {
+  color: #ff5722;
+  margin-bottom: 15px;
+}
+
+/* Education, Skills, Projects, Contact */
+.education h1,
+.skills h1,
+.projects h1,
+.contact h1 {
+  font-family: 'Poppins', sans-serif;
+  color: #ff5722;
+  margin-bottom: 20px;
+}
+
+.skills ul {
+  margin-bottom: 20px;
+  list-style: square;
+  padding-left: 20px;
+}
+
+/* Project Cards */
+.project-card {
+  background: #fff;
+  padding: 20px;
+  margin: 15px 0;
+  border-left: 5px solid #ff5722;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Contact Form */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+}
+
+form input,
+form textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+form button {
+  padding: 10px;
+  border: none;
+  background: #ff5722;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+form button:hover {
+  background: #e64a19;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-img img {
+    margin-bottom: 20px;
+  }
+  .nav-links {
+    justify-content: center; /* Stack links center on mobile */
+    gap: 20px;
+  }
+}
+
+/* === Go Back Button === */
+.go-back {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 18px;
+  cursor: pointer;
+  font-size: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: transform 0.2s, background-color 0.2s;
+  z-index: 1000;
+}
+
+.go-back:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+}
+
+body.dark-mode .go-back {
+  background-color: #fff;
+  color: #000;
+}
+
+
+/* Footer */
+footer {
+  background: rgba(30, 30, 47, 0.9);
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-size: 0.9rem;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.edu-left img {
+  width: 350px; /* Smaller size for high/middle school */
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Optional: make college images larger if you want */
+.edu-gallery.college img {
+  max-width: 350px;
+}
+
+/* Projects Page */
+.projects {
+  padding: 20px;
+}
+
+/* Projects Page */
+.projects {
+  padding: 20px;
+}
+
+.project-card {
+  background-color: #f7f7f7;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.project-card:hover {
+  transform: scale(1.02);
+  background-color: #eaeaea;
+}
+
+/* Modal styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 700px;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.modal-images {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.modal-images img {
+  width: calc(50% - 10px);
+  border-radius: 5px;
+}
+
+.modal-description {
+  margin-top: 15px;
+}
+
+/* === Scroll to Top Button Styling === */
+#scrollTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+#scrollTopBtn:hover {
+  background-color: #e64a19;
+}
+
+.greeting {
+  font-size: 1rem;
+  font-family: 'Georgia', serif;
+  color: #000 !important; /* Force black color */
+  margin-bottom: 20px;
+}
+
+/* === Dark/Light Mode Styles === */
+.theme-toggle {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #ffffff;
+  border: none;
+  font-size: 22px;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* Dark mode theme */
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark-mode header,
+.dark-mode footer {
+  background-color: #1e1e1e;
+}
+
+.dark-mode a {
+  color: #80cbc4;
+}
+
+/* === Fix for dark mode overriding gradient === */
+body.dark-mode {
+  background: #121212 !important;  /* Stops the animated gradient */
+  animation: none !important;       /* Stop gradient movement */
+  color: #ffffff;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+  background: #1e1e1e;
+}
+
+body.dark-mode a {
+  color: #80cbc4;
+}
+
+body.dark-mode section {
+  background: rgba(255, 255, 255, 0.05); /* slightly visible cards in dark mode */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
